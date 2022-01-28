@@ -1,0 +1,230 @@
+body {
+
+  margin: 0;
+  line-height: 1.6em;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+width: 80%;
+margin: auto;
+overflow: hidden;
+}
+
+#logo{
+    float: left;
+    width: 160px;
+    height: 160px;
+    margin-top: 10px;
+    background-image: url("C:/Users/claudio/Desktop/images/chstlogo.png");
+            }
+
+#header {
+            
+              width: 830px;
+              height: 160px;
+              margin-top: 10px;
+              font-family: Verdana, Tahoma, sans-serif;
+              font-size: 60px;
+              text-align: center;
+              font-weight: bold;
+              line-height: 60px;
+              margin-left: 120%;
+                 }
+
+#navbar  {
+background-color: maroon;
+color: white;
+margin-top: 1%;
+font-family: Verdana, Tahoma, sans-serif;
+
+}
+#navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  
+}
+#navbar li{
+float: left;
+}
+
+#navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+ }
+#navbar li a:hover{
+      background-color: #ed1c24;
+		
+            }
+
+		
+
+section {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "main main"
+    "event event";
+
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+section h1,h2, h3 {
+
+font-family: arial, helvetica, sans-serif;
+}
+
+
+  section {
+    grid-template-areas:
+      "main event"
+      "main event";
+  }
+
+
+.leftBox {
+  grid-area: main;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+section .leftBox .content {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 200px;
+  transition: 0.5s;
+}
+
+section .leftBox .content:hover {
+  background-color: maroon;
+}
+
+section .leftBox .content h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+section .leftBox .content p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+section .events {
+  grid-area: event;
+  background-color: rgba(maroon);
+  box-sizing: border-box;
+}
+
+section .events ul {
+  margin: 0;
+  padding: 40px;
+  list-style: none;
+}
+
+section .events ul li {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0;
+  grid-template-areas:
+    "time time"
+    "detail detail";
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  section .events ul li {
+    grid-template-areas:
+      "time detail"
+      "time detail";
+  }
+}
+
+section .events ul li .time {
+  grid-area: time;
+  position: relative;
+  padding: 8% 40%;
+  background-color: #262626;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: 0.5s;
+}
+
+section .events ul li:hover .time {
+  background-color: maroon;
+}
+
+section .events ul li .time h2 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 60px;
+  line-height: 30px;
+}
+
+section .events ul li .time h2 span {
+  font-size: 30px;
+}
+
+section .events ul li .details {
+  grid-area: detail;
+  padding: 20px 20px 32px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+
+section .events ul li .details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+}
+
+section .events ul li .details p {
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+section .events ul li .details a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #262626;
+  margin-top: 16px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+section .events ul li .details a:hover {
+  background-color: maroon;
+  color: #fff;
+  border-color: #e91e63;
+}
+#footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: maroon;
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
